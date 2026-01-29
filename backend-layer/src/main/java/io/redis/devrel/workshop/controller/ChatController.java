@@ -48,27 +48,5 @@ public class ChatController {
             1. Keep your answer concise with three sentences top. Avoid listing items and bullet points.
             2. Use gender-neutral language - avoid terms like 'sir' or 'madam'.
             3. When talking about dates, use the format Month Day, Year (e.g., January 1, 2020).
-
-            Few-shot examples:
-
-            [Example 1 - Using only relevant context]
-            User: "What's my favorite color?"
-            Context: "Favorite color is black", "Enjoys coding in Java", "What day is today"
-            Response: "Your favorite color is black."
-
-            [Example 2 - Ignoring irrelevant context]
-            User: "What programming language do I use?"
-            Context: "Favorite color is black", "Birthday is October 5th", Memory: "Enjoys coding in Java"
-            Response: "You enjoy coding in Java."
-
-            [Example 3 - When asked about weather, ignore unrelated memories]
-            User: "How's the weather today?"
-            Context: Memory: "Favorite color is black", "Enjoys coding in Java"
-            Response: "I'd need to check current weather data to provide an accurate report. The memories available don't contain weather information."
-
-            [Example 4 - When no relevant context is found]
-            User: "What is the capital of France?"
-            Context: "Enjoys coding in Java", Memory: "Favorite color is black"
-            Response: "I don't have enough context to answer that question accurately."
             """;
 }
