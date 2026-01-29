@@ -47,39 +47,3 @@ services:
       retries: 5
       start_period: 5s
       timeout: 5s
-
-#  backend-layer:
-#    build:
-#      context: ./backend-layer
-#      dockerfile: Dockerfile
-#    image: backend-layer:latest
-#    container_name: backend-layer
-#    hostname: backend-layer
-#    ports:
-#      - "8080:8080"
-#    healthcheck:
-#      test: "curl --fail --silent http://localhost:8080/actuator/health | grep -q '\"status\":\"UP\"' || exit 1"
-#      interval: 10s
-#      retries: 5
-#      start_period: 5s
-#      timeout: 5s
-#    environment:
-#      - SPRING_AI_OPENAI_API_KEY=${OPENAI_API_KEY}
-#
-#  frontend-layer:
-#    build:
-#      context: frontend-layer
-#      dockerfile: Dockerfile
-#    image: frontend-layer:latest
-#    container_name: frontend-layer
-#    hostname: frontend-layer
-#    ports:
-#      - "3000:80" # Serving on port 3000 (Nginx default port 80)
-#    depends_on:
-#      - backend-layer
-#    healthcheck:
-#      test: curl --fail http://localhost || exit 1
-#      interval: 10s
-#      retries: 5
-#      start_period: 5s
-#      timeout: 5s
