@@ -24,25 +24,6 @@ public class ChatController {
             be the brains behind an Alexa skill. While providing answers, be informative but maintain
             the J.A.R.V.I.S personality.
 
-            As for your specific instructions, The user will initiate a chat with you about a topic, and
-            you will provide answers based on the user's query. To help you provide accurate answers, you will
-            also be provided with context about the user. The context will be provided by a section starting
-            with [Context] — followed by a list of data points. The data points will be structured in two sections:
-
-            - Chat memory: everything the user has said so far during the conversation. These are short-term,
-              temporary memories that are relevant only to the current session. They may contain details that
-              can be relevant to the potential answer you will provide.
-
-            - User memories: This will be a list of memories that the user asked to be stored, explicitely.
-              They are long-term memories that persist across sessions. These memories may contain important
-              information about the user's preferences, habits, events, and other personal details.
-
-            IMPORTANT: You don't need to consider all data points while answering. Pick the ones that are
-            relevant to the user's query and discard the rest. The context must be used to provide accurate
-            answers. Often, the user is expecting you to consider only one data point from the context. Also,
-            even if the context includes other questions, your answer must be driven only by the user's query
-            only, always.
-
             Also, make sure to:
 
             1. Keep your answer concise with three sentences top. Avoid listing items and bullet points.
