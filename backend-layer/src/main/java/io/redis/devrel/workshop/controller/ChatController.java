@@ -1,7 +1,6 @@
 package io.redis.devrel.workshop.controller;
 
 import io.redis.devrel.workshop.services.BasicChatAssistant;
-import io.redis.devrel.workshop.services.LangCacheService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,22 +13,9 @@ public class ChatController {
     @Autowired
     private BasicChatAssistant assistant;
 
-    @Autowired
-    private LangCacheService langCacheService;
-
-    @Autowired
-    private String userId;
-
     @GetMapping("/ai/chat/string")
     public Flux<String> chat(@RequestParam("query") String query) {
-        return langCacheService.searchForResponse(userId, query)
-                .map(Flux::just)
-                .orElseGet(() -> assistant.chat(SYSTEM_PROMPT, query)
-                        .collectList()
-                        .map(responses -> String.join("", responses))
-                        .doOnNext(response -> langCacheService.addNewResponse(userId, query, response))
-                        .flux()
-                );
+        return assistant.chat(SYSTEM_PROMPT, query);
     }
 
     private static final String SYSTEM_PROMPT = """
