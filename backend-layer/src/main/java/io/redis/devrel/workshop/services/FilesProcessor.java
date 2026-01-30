@@ -36,15 +36,17 @@ public class FilesProcessor {
             File[] pdfFiles = dir.listFiles((d, name) -> name.toLowerCase().endsWith(".pdf"));
             if (pdfFiles != null) {
                 for (File pdf : pdfFiles) {
-                    processFile(pdf);
+                    // TODO: Uncomment the line below to enable file processing
+                    // processFile(pdf);
                 }
             }
         }
     }
 
     private void processFile(File file) {
-        final DocumentParser documentParser = new ApachePdfBoxDocumentParser(true);
-        final DocumentSplitter documentSplitter = new DocumentByParagraphSplitter(1000, 100);
+        // TODO: Initialize these objects properly
+        final DocumentParser documentParser = null;
+        final DocumentSplitter documentSplitter = null;
 
         logger.info("Processing file {}", file.getAbsolutePath());
         try (InputStream inputStream = new FileInputStream(file)) {
