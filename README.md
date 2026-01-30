@@ -39,7 +39,7 @@ By the end of this workshop, you'll have built a complete AI application featuri
 | [Redis Cloud](https://redis.io/try-free)                 | Semantic caching service powered by Redis LangCache      |
 
 ## 🗺️ Workshop Structure
-This workshop is organized into 9 progressive labs, each building upon the previous:
+This workshop is organized into 9 progressive labs, each building on the previous one.
 
 | Lab | Topic                                                           | Duration | Branch                            |
 |:----|:----------------------------------------------------------------|:---------|:----------------------------------
@@ -52,6 +52,8 @@ This workshop is organized into 9 progressive labs, each building upon the previ
 | 7   | Implementing a few-shot into the system prompt design           | 05 mins  | `lab-7-starter` |
 | 8   | Enabling token management to handle token limits                | 10 mins  | `lab-8-starter` |
 | 9   | Implementing semantic caching for conversations                 | 25 mins  | `lab-9-starter` |
+
+Each lab also contains a corresponding `lab-X-solution` branch with the completed code for reference. You can use this branch to compare your implementation or to get unstuck if needed.
 
 ## 🚀 Getting Started
 
@@ -73,6 +75,9 @@ git --version
 Navigate to the cloned repository and switch to the first lab's starter branch:
 ```bash
 cd context-engineering-with-langchain4j-workshop
+```
+
+```bash
 git checkout lab-1-starter
 ```
 
