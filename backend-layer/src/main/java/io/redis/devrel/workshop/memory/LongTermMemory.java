@@ -32,15 +32,8 @@ public class LongTermMemory {
                 .promptTemplate(PromptTemplate.from("{{userMessage}}\n\n[Context]\n{{contents}}"))
                 .build();
 
-        Map<ContentRetriever, String> retrieversToDesc = Map.of(
-                getLongTermMemories(userId), "User specific memories like preferences, events, and interactions",
-                getGeneralKnowledgeBase(), "General knowledge base (not really user related) with facts and data"
-        );
-        QueryRouter queryRouter = LanguageModelQueryRouter.builder()
-                .chatModel(chatModel)
-                .retrieverToDescription(retrieversToDesc)
-                .fallbackStrategy(LanguageModelQueryRouter.FallbackStrategy.ROUTE_TO_ALL)
-                .build();
+        // TODO: Implement query routing between long-term memories and general knowledge base
+        QueryRouter queryRouter = null;
 
         return DefaultRetrievalAugmentor.builder()
                 .contentInjector(contentInjector)
@@ -49,10 +42,8 @@ public class LongTermMemory {
     }
 
     private ContentRetriever getLongTermMemories(String userId) {
-        return query -> memoryService.searchUserMemories(userId, query.text())
-                .stream()
-                .map(Content::from)
-                .toList();
+        // TODO: Implement a content retriever that fetches user-specific memories
+        return null;
     }
 
     private ContentRetriever getGeneralKnowledgeBase() {
