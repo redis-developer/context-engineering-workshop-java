@@ -163,7 +163,7 @@ curl -X POST http://localhost:8000/v1/long-term-memory/ \
   -d '{
     "memories": [
       {
-        "id": "user-2bfc7e6e-452f-40d6-b7e7-29855518B052",
+        "id": "id-123456789",
         "session_id": "user-2bfc7e6e-452f-40d6-b7e7-29855518B052",
         "text": "My favorite programming language is Java",
         "namespace": "long-term-memory",
@@ -181,7 +181,13 @@ Alternatively, you can use the sample HTTP request available in the `rest-api-ca
 2. Ask "Which programming language do I enjoy coding in?"
 3. Verify the AI recalls "Java" from stored memory
 
-![lab-5-memory-test.png](images/lab-5-memory-test.png)
+![lab-5-checking-long-term-memory.png](images/lab-5-checking-long-term-memory.png)
+
+One interesting aspect of this lab is how the short-term chat memory (from Lab 2) and the long-term user memory (from this lab) work together. But you may notice that now the context provided to the LLM may be filled with multiple memories. For instance:
+
+![lab-5-context-with-multiple-memories.png](images/lab-5-context-with-multiple-memories.png)
+
+The LLM will then receive multiple memories in the context, which may be beneficial for answering more complex questions. But sometimes it may lead to a larger context filled with irrelevant data. Don't worry, we will fix this in the next lab.
 
 ### Store Multiple Memories
 
@@ -194,7 +200,7 @@ curl -X POST http://localhost:8000/v1/long-term-memory/ \
   -d '{
     "memories": [
       {
-        "id": "user-2bfc7e6e-452f-40d6-b7e7-29855518B052",
+        "id": "id-987654321",
         "session_id": "user-2bfc7e6e-452f-40d6-b7e7-29855518B052",
         "text": "I prefer black coffee with no milk or sugar",
         "namespace": "long-term-memory",
@@ -209,7 +215,7 @@ curl -X POST http://localhost:8000/v1/long-term-memory/ \
   -d '{
     "memories": [
       {
-        "id": "user-2bfc7e6e-452f-40d6-b7e7-29855518B052",
+        "id": "id-112233445",
         "session_id": "user-2bfc7e6e-452f-40d6-b7e7-29855518B052",
         "text": "My birthday is on October 5th",
         "namespace": "long-term-memory",
@@ -224,7 +230,7 @@ curl -X POST http://localhost:8000/v1/long-term-memory/ \
   -d '{
     "memories": [
       {
-        "id": "user-2bfc7e6e-452f-40d6-b7e7-29855518B052",
+        "id": "id-111222333",
         "session_id": "user-2bfc7e6e-452f-40d6-b7e7-29855518B052",
         "text": "I work as a software engineer at a startup",
         "namespace": "long-term-memory",
