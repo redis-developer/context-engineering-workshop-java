@@ -63,10 +63,11 @@ git clone https://github.com/redis-developer/context-engineering-with-langchain4
 ```
 
 ### Step 2: Verify your Environment
-Ensure you have Java, Maven, Docker, and Git installed. You can check their versions with:
+Ensure you have Java, Maven, Node.js, Docker, and Git installed. You can check their versions with:
 ```bash
 java -version
 mvn -version
+npm --version
 docker --version
 git --version
 ```
