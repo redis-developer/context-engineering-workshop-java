@@ -39,7 +39,7 @@ By the end of this workshop, you'll have built a complete AI application featuri
 | [Redis Cloud](https://redis.io/try-free)                 | Semantic caching service powered by Redis LangCache      |
 
 ## 🗺️ Workshop Structure
-This workshop is organized into 9 progressive labs, each building on the previous one.
+This workshop has an estimated duration of 2 hours and is organized into 9 progressive labs, each building on the previous one.
 
 | Lab | Topic                                                           | Duration | Branch                            |
 |:----|:----------------------------------------------------------------|:---------|:----------------------------------
@@ -50,7 +50,7 @@ This workshop is organized into 9 progressive labs, each building on the previou
 | 5   | Enabling on-demand context management for memories              | 10 mins  | `lab-5-starter` |
 | 6   | Implementing query compression and context reranking            | 15 mins  | `lab-6-starter` |
 | 7   | Implementing a few-shot into the system prompt design           | 05 mins  | `lab-7-starter` |
-| 8   | Enabling token management to handle token limits                | 10 mins  | `lab-8-starter` |
+| 8   | Enabling token management to handle token limits                | 05 mins  | `lab-8-starter` |
 | 9   | Implementing semantic caching for conversations                 | 25 mins  | `lab-9-starter` |
 
 Each lab also contains a corresponding `lab-X-solution` branch with the completed code for reference. You can use this branch to compare your current implementation using `git diff {lab-X-solution}`. Alternatively, you can switch to the solution branch at any time during the lab if you are falling behind or to get unstuck.
