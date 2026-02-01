@@ -22,12 +22,7 @@ In this foundational lab, you'll deploy a basic AI chat application that will se
 
 ### Architecture Overview
 
-```
-┌─────────────┐     ┌──────────────────┐     ┌─────────────——┐
-│  Frontend   │────▶│  Spring Boot API │────▶│    OpenAI     │
-│  (Node.js)  │     │   + LangChain4J  │     │ GPT-3.5 Turbo │
-└─────────────┘     └──────────────────┘     └────────────——─┘
-```
+![architecture-overview.png](images/architecture-overview.png)
 
 ## 📋 Prerequisites Check
 
