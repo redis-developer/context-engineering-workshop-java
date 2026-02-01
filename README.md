@@ -49,36 +49,36 @@ Open `backend-layer/src/main/java/io/redis/devrel/workshop/config/ModelManager.j
 @Configuration
 public class ModelManager {
 
-  private String modelPath;
-  private String tokenizerPath;
+    private String modelPath;
+    private String tokenizerPath;
 
-  @PostConstruct
-  public void extractModels() throws IOException {
-    Path tempDir = Files.createTempDirectory("onnx-models");
+    @PostConstruct
+    public void extractModels() throws IOException {
+        Path tempDir = Files.createTempDirectory("onnx-models");
 
-    Path modelFile = tempDir.resolve("model.onnx");
-    try (InputStream is = getClass().getClassLoader()
-            .getResourceAsStream("ms-marco-MiniLM-L-6/model.onnx")) {
-      Files.copy(is, modelFile);
+        Path modelFile = tempDir.resolve("model.onnx");
+        try (InputStream is = getClass().getClassLoader()
+                .getResourceAsStream("ms-marco-MiniLM-L-6/model.onnx")) {
+            Files.copy(is, modelFile);
+        }
+
+        Path tokenizerFile = tempDir.resolve("tokenizer.json");
+        try (InputStream is = getClass().getClassLoader()
+                .getResourceAsStream("ms-marco-MiniLM-L-6/tokenizer.json")) {
+            Files.copy(is, tokenizerFile);
+        }
+
+        this.modelPath = modelFile.toAbsolutePath().toString();
+        this.tokenizerPath = tokenizerFile.toAbsolutePath().toString();
     }
 
-    Path tokenizerFile = tempDir.resolve("tokenizer.json");
-    try (InputStream is = getClass().getClassLoader()
-            .getResourceAsStream("ms-marco-MiniLM-L-6/tokenizer.json")) {
-      Files.copy(is, tokenizerFile);
+    public String getModelPath() {
+        return modelPath;
     }
 
-    this.modelPath = modelFile.toAbsolutePath().toString();
-    this.tokenizerPath = tokenizerFile.toAbsolutePath().toString();
-  }
-
-  public String getModelPath() {
-    return modelPath;
-  }
-
-  public String getTokenizerPath() {
-    return tokenizerPath;
-  }
+    public String getTokenizerPath() {
+        return tokenizerPath;
+    }
 }
 ```
 
@@ -238,9 +238,8 @@ Congratulations! You've successfully:
 
 ## 📚 Additional Resources
 
-- [Query Compression Techniques](https://docs.langchain4j.dev/tutorials/rag#query-compression)
+- [Query Compression Techniques](https://docs.langchain4j.dev/tutorials/rag/#query-transformer)
 - [ONNX Runtime Documentation](https://onnxruntime.ai/docs/)
-- [Reranking in RAG Systems](https://www.pinecone.io/learn/series/rag/rerankers/)
 - [MS MARCO Models](https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-6-v2)
 
 ## ➡️ Next Steps
