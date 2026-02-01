@@ -22,31 +22,7 @@ In this final lab, you'll implement semantic caching to avoid redundant LLM call
 
 ### Architecture Overview
 
-```
-┌─────────────┐     ┌────────────────—──┐     ┌─────────────——┐
-│  Frontend   │────▶│  Spring Boot API  │────▶│    OpenAI     │
-│  (Node.js)  │     │   + LangChain4J   │     │ GPT-3.5 Turbo │
-└─────────────┘     │  + Semantic Cache │     └────────────——─┘
-                    └─────────────────—─┘
-                             │
-                    [1] User Query
-                             ▼
-                    ┌──────────────—─—───┐
-                    │  Redis LangCache   │
-                    │  Similarity Search │
-                    └───────────────—─—──┘
-                             │
-                    [2] Cache Hit?
-                        ╱         ╲
-                      Yes          No
-                      ╱              ╲
-                    ▼                  ▼
-            [Return Cached]      [Call LLM]
-                                       │
-                                [3] Store Response
-                                       ▼
-                                [Return & Cache]
-```
+![architecture-diagram.png](images/architecture-diagram.png)
 
 ## 📋 Prerequisites Check
 
