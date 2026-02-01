@@ -314,10 +314,8 @@ Congratulations! You've successfully:
 
 ## 📚 Additional Resources
 
-- [LangChain4J Memory Types](https://docs.langchain4j.dev/tutorials/chat-memory)
-- [Personal Knowledge Management](https://www.pinecone.io/learn/personal-ai-assistant/)
-- [Query Routing Strategies](https://docs.langchain4j.dev/tutorials/rag#routing)
-- [Memory System Design](https://redis.io/docs/stack/search/reference/vectors/)
+- [Query Routing Strategies](https://docs.langchain4j.dev/tutorials/rag/#query-router)
+- [Content Aggregation Strategies](https://docs.langchain4j.dev/tutorials/rag/#content-aggregator)
 
 ## ➡️ Next Steps
 
