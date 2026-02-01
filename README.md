@@ -260,7 +260,6 @@ Congratulations! You've successfully:
 
 - [Few-shot Prompting Guide](https://www.promptingguide.ai/techniques/fewshot)
 - [OpenAI Best Practices](https://platform.openai.com/docs/guides/prompt-engineering)
-- [LangChain4J Prompting](https://docs.langchain4j.dev/tutorials/prompting)
 - [In-context Learning Research](https://arxiv.org/abs/2005.14165)
 
 ## ➡️ Next Steps
