@@ -35,12 +35,11 @@ public class LangCacheService {
     @Autowired
     private HttpClient httpClient;
 
-    public void addNewResponse(String userId, String prompt, String response) {
+    public void addNewResponse(String prompt, String response) {
         try {
             String requestBody = objectMapper.writeValueAsString(Map.of(
                     "prompt", prompt,
                     "response", response,
-                    "attributes", Map.of("userId", userId),
                     "ttlMillis", TIME_TO_LIVE_IN_SECONDS * 1000
             ));
 
@@ -58,13 +57,12 @@ public class LangCacheService {
         }
     }
 
-    public Optional<String> searchForResponse(String userId, String prompt) {
+    public Optional<String> searchForResponse(String prompt) {
         logger.debug("Searching for response for prompt {}", prompt);
         try {
             String requestBody = objectMapper.writeValueAsString(Map.of(
                     "prompt", prompt,
                     "similarityThreshold", SIMILARITY_THRESHOLD,
-                    "attributes", Map.of("userId", userId),
                     "searchStrategies", List.of("semantic")
             ));
 

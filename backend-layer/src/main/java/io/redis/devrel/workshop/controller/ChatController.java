@@ -17,17 +17,14 @@ public class ChatController {
     @Autowired
     private LangCacheService langCacheService;
 
-    @Autowired
-    private String userId;
-
     @GetMapping("/ai/chat/string")
     public Flux<String> chat(@RequestParam("query") String query) {
-        return langCacheService.searchForResponse(userId, query)
+        return langCacheService.searchForResponse(query)
                 .map(Flux::just)
                 .orElseGet(() -> assistant.chat(SYSTEM_PROMPT, query)
                         .collectList()
                         .map(responses -> String.join("", responses))
-                        .doOnNext(response -> langCacheService.addNewResponse(userId, query, response))
+                        .doOnNext(response -> langCacheService.addNewResponse(query, response))
                         .flux()
                 );
     }
