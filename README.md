@@ -46,19 +46,25 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
-### Step 1: Define the Redis Agent Memory Server URL
+### Step 1: Switch to the Lab 2 Branch
+
+```bash
+git checkout lab-2-starter
+```
+
+### Step 2: Define the Redis Agent Memory Server URL
 
 ```bash
 AGENT_MEMORY_SERVER_URL=http://localhost:8000
 ```
 
-### Step1 2: Start the Redis Agent Memory Server
+### Step1 3: Start the Redis Agent Memory Server
 
 ```bash
 docker compose up -d
 ```
 
-### Step 3: Verify if the Containers are Running
+### Step 4: Verify if the Containers are Running
 
 ```bash
 docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}\t{{.Names}}"
@@ -73,13 +79,13 @@ CONTAINER ID   IMAGE                                  STATUS                   P
 3c449915bb35   redis:8.4.0                            Up 2 minutes (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   redis-database
 ```
 
-### Step 4: Review the ChatMemoryStore Implementation
+### Step 5: Review the ChatMemoryStore Implementation
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/extensions/WorkingMemoryStore.java` and review the code.
 
 This is a wrapper around the Redis Agent Memory Server REST APIs implemented using the support for chat memory stored from LangChain4J.
 
-### Step 5: Implement the ChatMemoryStore Bean
+### Step 6: Implement the ChatMemoryStore Bean
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/memory/ShortTermMemory.java` and implement the method `chatMemoryStore()`.
 
@@ -107,7 +113,7 @@ public ChatMemoryStore chatMemoryStore() {
 
 This bean will provide the persistence layer for the chat memory, taking care of storing and retrieving messages from the Redis Agent Memory Server.
 
-### Step 6: Implement the ChatMemory Bean
+### Step 7: Implement the ChatMemory Bean
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/memory/ShortTermMemory.java` and implement the method `chatMemory()`.
 
@@ -135,7 +141,7 @@ public ChatMemory chatMemory(ChatMemoryStore chatMemoryStore) {
 
 This bean will manage the chat memory for each user session, using the `WorkingMemoryStore` to persist messages.
 
-### Step 7: Rebuild and Run the Backend
+### Step 8: Rebuild and Run the Backend
 
 ```bash
 cd backend-layer
@@ -143,7 +149,7 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-### Step 8: Keep the Frontend Running
+### Step 9: Keep the Frontend Running
 
 The frontend should still be running from Lab 1. If not:
 
