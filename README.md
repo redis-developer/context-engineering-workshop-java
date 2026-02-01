@@ -257,9 +257,9 @@ Congratulations! You've successfully:
 ## 📚 Additional Resources
 
 - [LangChain4J RAG Tutorial](https://docs.langchain4j.dev/tutorials/rag)
-- [Understanding RAG Systems](https://www.pinecone.io/learn/retrieval-augmented-generation/)
-- [Content Injection Strategies](https://docs.langchain4j.dev/tutorials/rag#augmentation)
-- [Vector Search Best Practices](https://redis.io/docs/stack/search/reference/vectors/)
+- [Understanding RAG Systems](https://redis.io/glossary/retrieval-augmented-generation/)
+- [Content Retriever Concepts](https://docs.langchain4j.dev/tutorials/rag/#content-retriever)
+- [Content Injection Strategies](https://docs.langchain4j.dev/tutorials/rag/#content-injector)
 
 ## ➡️ Next Steps
 
