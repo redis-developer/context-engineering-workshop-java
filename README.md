@@ -185,9 +185,8 @@ Congratulations! You've successfully:
 ## 📚 Additional Resources
 
 - [LangChain4J Documentation](https://docs.langchain4j.dev/)
-- [Spring Boot AI Integration Guide](https://spring.io/projects/spring-ai)
 - [OpenAI API Reference](https://platform.openai.com/docs)
-- [Redis Vector Similarity Docs](https://redis.io/docs/stack/search/reference/vectors/)
+- [Spring Boot](https://docs.spring.io/spring-boot/index.html)
 
 ## ➡️ Next Steps
 
