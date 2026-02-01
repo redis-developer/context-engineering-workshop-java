@@ -243,7 +243,7 @@ Congratulations! You've successfully:
 
 ## 📚 Additional Resources
 
-- [Redis Agent Memory Server]{https://redis.github.io/agent-memory-server/}
+- [Redis Agent Memory Server](https://redis.github.io/agent-memory-server/)
 - [LangChain4J Chat Memory](https://docs.langchain4j.dev/tutorials/chat-memory)
 
 ## ➡️ Next Steps
