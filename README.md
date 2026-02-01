@@ -59,7 +59,13 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
-### Step 1: Review the LangCacheService
+### Step 1: Switch to the Lab 9 Branch
+
+```bash
+git checkout lab-9-starter
+```
+
+### Step 2: Review the LangCacheService
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/services/LangCacheService.java` and review the caching methods:
 
@@ -77,7 +83,7 @@ Key configuration values:
 - **TTL**: 60 seconds (for testing, production would be higher)
 - **Similarity Threshold**: 0.7 (70% similarity required for cache hit)
 
-### Step 2: Create Redis LangCache Service
+### Step 3: Create Redis LangCache Service
 
 1. Go to [Redis Cloud Console](https://cloud.redis.io)
 2. Navigate to the LangCache section in the left menu
@@ -87,7 +93,7 @@ Key configuration values:
     - **API Key**
     - **Base URL**
 
-### Step 3: Configure LangCache Properties
+### Step 4: Configure LangCache Properties
 
 Add to your `.env` file:
 
@@ -97,7 +103,7 @@ REDIS_LANGCACHE_SERVICE_APIKEY=your-api-key-here
 REDIS_LANGCACHE_SERVICE_CACHEID=your-cache-id-here
 ```
 
-### Step 4: Implement Cache Check in ChatController
+### Step 5: Implement Cache Check in ChatController
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/controller/ChatController.java` and update the `chat()` method.
 
@@ -127,7 +133,7 @@ public Flux<String> chat(@RequestParam("query") String query) {
 }
 ```
 
-### Step 5: Rebuild and Run the Backend
+### Step 6: Rebuild and Run the Backend
 
 ```bash
 cd backend-layer
@@ -135,7 +141,7 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-### Step 6: Keep the Frontend Running
+### Step 7: Keep the Frontend Running
 
 The frontend should still be running. If not:
 
