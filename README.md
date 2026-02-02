@@ -245,7 +245,3 @@ Congratulations! You've successfully:
 ## ➡️ Next Steps
 
 You're ready for [Lab 7: Implementing Few-shot Learning in System Prompts](../lab-7-starter/README.md) where you'll add examples to improve response consistency.
-
-```bash
-git checkout lab-7-starter
-```
