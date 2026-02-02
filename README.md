@@ -78,12 +78,6 @@ Navigate to the cloned repository.
 cd context-engineering-workshop-java
 ```
 
-Switch to the branch for Lab 1.
-
-```bash
-git checkout lab-1-starter
-```
-
 Click on the link for [Lab 1: Set up and deploy the AI application](../../tree/lab-1-starter/README.md) to get started!
 
 ## Resources
