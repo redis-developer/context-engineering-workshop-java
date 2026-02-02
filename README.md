@@ -73,10 +73,12 @@ git --version
 ```
 
 ### Step 3: Begin your First Lab
-Navigate to the cloned repository and switch to the first lab's starter branch:
+Navigate to the cloned repository.
 ```bash
 cd context-engineering-workshop-java
 ```
+
+Switch to the branch for Lab 1.
 
 ```bash
 git checkout lab-1-starter
