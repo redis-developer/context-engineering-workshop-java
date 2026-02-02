@@ -320,7 +320,3 @@ Congratulations! You've successfully:
 ## ➡️ Next Steps
 
 You're ready for [Lab 6: Implementing Query Compression and Context Reranking](../lab-6-starter/README.md) where you'll optimize query processing and improve retrieval quality.
-
-```bash
-git checkout lab-6-starter
-```
