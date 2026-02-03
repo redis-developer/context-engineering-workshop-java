@@ -3,6 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Java 21+](https://img.shields.io/badge/Java-21%2B-blue.svg)](https://www.oracle.com/java/technologies/downloads)
 [![LangChain4J](https://img.shields.io/badge/LangChain4J-Framework-green.svg)](https://github.com/langchain4j/langchain4j)
+[![Redis Agent Memory](https://img.shields.io/badge/Redis-Agent%20Memory-DC382D.svg)](https://redis.github.io/agent-memory-server/)
+[![Redis LangCache](https://img.shields.io/badge/Redis-LangCache-DC382D.svg)](https://redis.io/langcache/)
 
 ## Overview
 Welcome to this hands-on workshop, where you'll learn to implement sophisticated context-engineering patterns. Context Engineering is the practice of strategically designing, structuring, and optimizing the information provided to AI models (particularly LLMs) to achieve desired outputs. It goes beyond simple prompt engineering by considering the entire context window and how data is organized, presented, and sequenced to maximize model performance. In this workshop, you will learn how to implement this using [Java](https://www.java.com/en/), [LangChain4J](https://github.com/langchain4j/langchain4j), and [Redis](https://redis.io/).
