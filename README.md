@@ -10,7 +10,7 @@ You've successfully completed the Context Engineering Workshop for Java Develope
 
 Your application now implements a comprehensive context engineering solution with:
 
-![complete-system.png](images/complete-system.png)
+![workshop-complete.png](images/workshop-complete.png)
 
 ## 📚 Context Engineering Techniques Implemented
 
