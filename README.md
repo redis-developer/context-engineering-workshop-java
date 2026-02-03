@@ -244,5 +244,3 @@ This workshop was made possible by:
 You're now equipped with the knowledge and tools to build sophisticated, production-ready AI applications. The future of context-aware AI is in your hands. Go forth and build amazing things! 🚀
 
 ---
-
-*"The best way to predict the future is to invent it."* - Alan Kay
