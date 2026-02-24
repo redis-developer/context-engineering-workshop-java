@@ -2,7 +2,7 @@ services:
   redis-agent-memory-server:
     container_name: redis-agent-memory-server
     hostname: redis-agent-memory-server
-    image: redislabs/agent-memory-server:0.12.7
+    image: redislabs/agent-memory-server:0.13.2
     ports:
       - "8000:8000"
     environment:
