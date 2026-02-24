@@ -16,7 +16,7 @@ services:
   redis-database:
     container_name: redis-database
     hostname: redis-database
-    image: redis:8.4.0
+    image: redis:8.6.0
     volumes:
       - ./data:/data
     environment:
