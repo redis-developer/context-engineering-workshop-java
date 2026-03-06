@@ -42,11 +42,23 @@ By the end of this workshop, you'll have built a complete AI application featuri
 * Familiarity with RESTful APIs
 
 ### Required software
+Choose one of the following setup options:
+
+#### Option 1: Local development
 * [Java 21+](https://www.oracle.com/java/technologies/downloads)
 * [Maven 3.9+](https://maven.apache.org/install.html)
+* [Node.js](https://nodejs.org/en/download/)
 * [Docker](https://docs.docker.com/get-docker/)
 * [Git](https://git-scm.com/install/)
-* [Node.js](https://nodejs.org/en/download/)
+* Java IDE
+
+#### Option 2: Dev Containers
+* [Docker](https://docs.docker.com/get-docker/)
+* Java IDE compatible with [Dev Containers](https://containers.dev/)
+  * [VS Code](https://code.visualstudio.com/)
+  * [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+
+> With Dev Containers, you don't need to install Java, Maven, Node.js, and Git explicitly.
 
 ### Required accounts
 | Account                                                  | Description                                              | Cost                  |
@@ -80,8 +92,8 @@ Each lab also contains a corresponding `lab-X-solution` branch with the complete
 git clone https://github.com/redis-developer/context-engineering-workshop-java.git
 ```
 
-### Step 2: Verify your Environment
-Ensure you have Java, Maven, Node.js, Docker, and Git installed. You can check their versions with:
+### Step 2: Prepare your Environment
+If you are using local development, ensure you have Java, Maven, Node.js, Docker, and Git installed. You can check their versions with:
 ```bash
 java -version
 mvn -version
@@ -89,6 +101,11 @@ npm --version
 docker --version
 git --version
 ```
+
+If you are using Dev Containers, open the project in the container and continue to Step 3. Follow the instructions for your IDE to open the project in the container.
+
+- **VS Code**: https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container
+- **IntelliJ IDEA**: https://www.jetbrains.com/help/idea/start-dev-container-from-welcome-screen.html
 
 ### Step 3: Begin your First Lab
 Navigate to the cloned repository.
