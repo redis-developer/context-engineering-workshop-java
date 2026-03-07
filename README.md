@@ -112,7 +112,7 @@ Test basic chat functionality
 curl -X GET "http://localhost:8080/ai/chat/string?query=Hello"
 ```
 
-You should receive a streaming response.
+You should receive a standard JSON/text REST response.
 
 ### Frontend Verification
 
@@ -128,7 +128,7 @@ You should receive a streaming response.
 
 ### 1. `BasicChatAssistant.java`
 - Simple AI Service interface using LangChain4J
-- Uses Reactive Flux for streaming responses
+- Uses synchronous request/response behavior
 
 ### 2. `ChatController.java`
 - REST endpoint for chat interactions
