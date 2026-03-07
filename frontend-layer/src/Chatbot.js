@@ -26,7 +26,9 @@ const Chatbot = () => {
         setLastUserTimestamp(timestamp);
 
         try {
-            const response = await axios.get('http://localhost:8080/ai/chat/string?query=' + input);
+            const response = await axios.get('/ai/chat/string', {
+                params: { query: input }
+            });
             const elapsed = Date.now() - timestamp;
             const aiMessage = { text: response.data, sender: 'ai', elapsed };
             setMessages(prevMessages => [...prevMessages, aiMessage]);
