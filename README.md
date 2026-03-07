@@ -41,6 +41,8 @@ Before starting, ensure you have:
 git checkout lab-8-starter
 ```
 
+Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
+
 ### Step 2: Review Token Configuration
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/memory/ShortTermMemory.java` and review the token-related configuration:
@@ -91,7 +93,7 @@ CHAT_MEMORY_MAX_TOKENS=768
 ```
 
 The `max-tokens` value of `768` is very low for production environments but is suitable for testing token management behavior. This will give you a good testing experience so you won't have to create lenghty conversations with the AI to see the message pruning in action.
-
+ 
 ### Step 5: Rebuild and Run the Backend
 
 ```bash
