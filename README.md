@@ -34,15 +34,9 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
-### Step 1: Switch to the Lab 2 Branch
-
-```bash
-git checkout lab-2-starter
-```
-
 Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
 
-### Step 2: Define the Redis Agent Memory Server URL
+### Step 1: Define the Redis Agent Memory Server URL
 
 If running from a local host terminal:
 
@@ -56,7 +50,7 @@ If running from a terminal inside the Dev Container:
 AGENT_MEMORY_SERVER_URL=http://redis-agent-memory-server:8000
 ```
 
-### Step 3: Start the Redis Agent Memory Server (Local development only)
+### Step 1: Start the Redis Agent Memory Server (Local development only)
 
 If you are running this workshop from a local host terminal, start the containers with:
 
@@ -66,7 +60,7 @@ docker compose up -d
 
 If you are using Dev Containers, skip this step. The sidecar services should already be running.
 
-### Step 4: Verify if the Containers are Running (Local development only)
+### Step 1: Verify if the Containers are Running (Local development only)
 
 If you are running this workshop from a local host terminal, verify container status with:
 
@@ -83,13 +77,13 @@ CONTAINER ID   IMAGE                                  STATUS                   P
 3c449915bb35   redis:8.6.0                            Up 2 minutes (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   redis-database
 ```
 
-### Step 5: Review the ChatMemoryStore Implementation
+### Step 1: Review the ChatMemoryStore Implementation
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/extensions/WorkingMemoryStore.java` and review the code.
 
 This is a wrapper around the Redis Agent Memory Server REST APIs implemented using the support for chat memory stored from LangChain4J.
 
-### Step 6: Implement the ChatMemoryStore Bean
+### Step 1: Implement the ChatMemoryStore Bean
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/memory/ShortTermMemory.java` and implement the method `chatMemoryStore()`.
 
@@ -117,7 +111,7 @@ public ChatMemoryStore chatMemoryStore() {
 
 This bean will provide the persistence layer for the chat memory, taking care of storing and retrieving messages from the Redis Agent Memory Server.
 
-### Step 7: Implement the ChatMemory Bean
+### Step 1: Implement the ChatMemory Bean
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/memory/ShortTermMemory.java` and implement the method `chatMemory()`.
 
@@ -145,7 +139,7 @@ public ChatMemory chatMemory(ChatMemoryStore chatMemoryStore) {
 
 This bean will manage the chat memory for each user session, using the `WorkingMemoryStore` to persist messages.
 
-### Step 8: Rebuild and Run the Backend
+### Step 1: Rebuild and Run the Backend
 
 ```bash
 cd backend-layer
@@ -153,7 +147,7 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-### Step 9: Keep the Frontend Running
+### Step 1: Keep the Frontend Running
 
 The frontend should still be running from Lab 1. If not:
 
@@ -265,3 +259,6 @@ Congratulations! You've successfully:
 ## ➡️ Next Steps
 
 You're ready for [Lab 3: Knowledge Base with Embeddings, Parsers, and Splitters](../lab-3-starter/README.md) where you'll add document processing and knowledge base capabilities.
+
+- Switch to the  branch
+\\n- Then follow the README instructions
