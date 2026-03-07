@@ -26,8 +26,20 @@ In this foundational lab, you'll deploy a basic AI chat application that will se
 
 ## 📋 Prerequisites Check
 
-Before starting, ensure you have:
+Before starting, confirm the checklist for the setup option you selected:
 
+### Option 1: GitHub Codespaces
+- [ ] GitHub Codespace created for this repository
+- [ ] Codespace is running and terminal is available
+- [ ] OpenAI API key ready
+
+### Option 2: Dev Containers locally
+- [ ] Docker up and running on your machine
+- [ ] Repository cloned locally
+- [ ] Project opened in your IDE Dev Container
+- [ ] OpenAI API key ready
+
+### Option 3: Local development
 - [ ] Java 21+ properly installed
 - [ ] Maven 3.9+ installed
 - [ ] Docker up and running
@@ -198,4 +210,3 @@ You're ready for [Lab 2: Enabling Short-term Memory with Chat Memory](../lab-2-s
 git checkout lab-2-starter
 ```
 - Then follow the README instructions
-
