@@ -48,7 +48,7 @@ private static final String SYSTEM_PROMPT = """
             """;
 ```
 
-### Step 1: Add Few-shot Examples to the System Prompt
+### Step 2: Add Few-shot Examples to the System Prompt
 
 Replace the existing `SYSTEM_PROMPT` with an enhanced version that includes few-shot examples.
 
@@ -120,7 +120,7 @@ private static final String SYSTEM_PROMPT = """
             """;
 ```
 
-### Step 1: Rebuild and Run the Backend
+### Step 3: Rebuild and Run the Backend
 
 ```bash
 cd backend-layer
@@ -128,7 +128,7 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-### Step 1: Keep the Frontend Running
+### Step 4: Keep the Frontend Running
 
 The frontend should still be running. If not:
 
@@ -261,6 +261,12 @@ Congratulations! You've successfully:
 ## ➡️ Next Steps
 
 You're ready for [Lab 8: Enabling Token Management to Handle Token Limits](../lab-8-starter/README.md) where you'll implement dynamic context window management.
+
+- Switch to the `lab-8-starter` branch
+```bash
+git checkout lab-8-starter
+```
+- Then follow the README instructions
 
 - Switch to the  branch
 \\n- Then follow the README instructions
