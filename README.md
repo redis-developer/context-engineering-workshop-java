@@ -38,12 +38,6 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
-### Step 1: Switch to the Lab 1 Branch
-
-```bash
-git checkout lab-1-starter
-```
-
 ### Step 2: Create an Environment File
 
 ```bash
