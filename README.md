@@ -34,7 +34,7 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
-Dev Container/Codespaces note: For browser access to app ports (for example, 3000, 8080, and 5540), use the forwarded URL from the Ports panel. If you run terminal commands inside the Dev Container or GitHub Codespaces, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
+> 💡 For Dev Containers and GitHub Codespaces, use the forwarded URL from the Ports panel for browser access to app ports (for example, 3000, 8080, and 5540), and use sidecar service DNS names for terminal commands inside the container workspace (for example, `http://redis-agent-memory-server:8000`).
 
 ### Step 1: Define the Redis Agent Memory Server URL
 
