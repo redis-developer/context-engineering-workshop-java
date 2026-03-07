@@ -35,7 +35,7 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
-Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
+Dev Container/Codespaces note: For browser access to app ports (for example, 3000, 8080, and 5540), use the forwarded URL from the Ports panel. If you run terminal commands inside the Dev Container or GitHub Codespaces, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
 
 ### Step 1: Review the LangCacheService
 
