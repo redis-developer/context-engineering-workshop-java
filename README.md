@@ -87,7 +87,7 @@ To this:
 
 ```java
 private void processFile(File file) {
-    final DocumentParser documentParser = new ApachePdfBoxDocumentParser();
+    final DocumentParser documentParser = new ApachePdfBoxDocumentParser(true);
     final DocumentSplitter documentSplitter = new DocumentByParagraphSplitter(1000, 100);
 ```
 
