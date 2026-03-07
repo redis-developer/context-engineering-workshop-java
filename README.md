@@ -46,7 +46,7 @@ git checkout lab-2-starter
 AGENT_MEMORY_SERVER_URL=http://localhost:8000
 ```
 
-### Step1 3: Start the Redis Agent Memory Server
+### Step 3: Start the Redis Agent Memory Server
 
 ```bash
 docker compose up -d
