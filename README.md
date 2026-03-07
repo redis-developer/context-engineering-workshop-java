@@ -135,8 +135,6 @@ Using RedisInsight:
 3. Verify older messages are removed
 4. Confirm recent messages remain
 
-
-
 ### Test with Different Token Limits
 
 Temporarily adjust `CHAT_MEMORY_MAX_TOKENS` in .env:
@@ -229,12 +227,6 @@ Congratulations! You've successfully:
 ## ➡️ Next Steps
 
 You're ready for [Lab 9: Implementing Semantic Caching for Conversations](../lab-9-starter/README.md) where you'll add the final optimization - semantic caching to reduce redundant LLM calls.
-
-- Switch to the `lab-9-starter` branch
-```bash
-git checkout lab-9-starter
-```
-- Then follow the README instructions
 
 - Switch to the  branch
 \\n- Then follow the README instructions
