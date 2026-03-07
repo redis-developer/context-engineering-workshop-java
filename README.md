@@ -46,7 +46,7 @@ git checkout lab-2-starter
 AGENT_MEMORY_SERVER_URL=http://localhost:8000
 ```
 
-### Step1 3: Start the Redis Agent Memory Server
+### Step 3: Start the Redis Agent Memory Server
 
 ```bash
 docker compose up -d
@@ -82,8 +82,8 @@ Change from this:
 ```java
 @Bean
 public ChatMemoryStore chatMemoryStore() {
-    // TODO: Implement a WorkingMemoryStore that connects to the agentMemoryServerUrl
-    return null;
+  // TODO: Implement a WorkingMemoryStore that connects to the agentMemoryServerUrl
+  return null;
 }
 ```
 
@@ -92,10 +92,10 @@ To this:
 ```java
 @Bean
 public ChatMemoryStore chatMemoryStore() {
-    return WorkingMemoryStore.builder()
-            .agentMemoryServerUrl(agentMemoryServerUrl)
-            .storeAiMessages(true)
-            .build();
+  return WorkingMemoryStore.builder()
+          .agentMemoryServerUrl(agentMemoryServerUrl)
+          .storeAiMessages(true)
+          .build();
 }
 ```
 
@@ -110,8 +110,8 @@ Change from this:
 ```java
 @Bean
 public ChatMemory chatMemory(ChatMemoryStore chatMemoryStore) {
-    // TODO: Implement a WorkingMemoryChat that uses the WorkingMemoryStore
-    return null;
+  // TODO: Implement a WorkingMemoryChat that uses the WorkingMemoryStore
+  return null;
 }
 ```
 
@@ -120,10 +120,10 @@ To this:
 ```java
 @Bean
 public ChatMemory chatMemory(ChatMemoryStore chatMemoryStore) {
-    return WorkingMemoryChat.builder()
-            .id(userId)
-            .chatMemoryStore(chatMemoryStore)
-            .build();
+  return WorkingMemoryChat.builder()
+          .id(userId)
+          .chatMemoryStore(chatMemoryStore)
+          .build();
 }
 ```
 
