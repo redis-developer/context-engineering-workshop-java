@@ -38,6 +38,8 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
+Dev Container/Codespaces note: For browser access to app ports (for example, 3000, 8080, and 5540), use the forwarded URL from the Ports panel. If you run terminal commands inside the Dev Container or GitHub Codespaces, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
+
 ### Step 1: Create an Environment File
 
 ```bash
