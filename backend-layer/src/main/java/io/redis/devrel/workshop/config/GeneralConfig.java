@@ -39,8 +39,8 @@ public class GeneralConfig {
             @Override
             public void addCorsMappings(@NonNull CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOriginPatterns("http://localhost:3000", "https://*.app.github.dev/")
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH")
+                        .allowedOriginPatterns("http://localhost:3000", "https://*.app.github.dev")
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
             }
