@@ -58,11 +58,11 @@ Open `backend-layer/src/main/java/io/redis/devrel/workshop/services/FilesProcess
 ```java
 @Service
 public class FilesProcessor {
-    // Automatic PDF scanning every 5 seconds
-    @Scheduled(fixedRate = 5000)
-    public void scanForPdfFiles() {
-        // Scans for new PDF files
-    }
+  // Automatic PDF scanning every 5 seconds
+  @Scheduled(fixedRate = 5000)
+  public void scanForPdfFiles() {
+    // Scans for new PDF files
+  }
 }
 ```
 
@@ -76,17 +76,17 @@ In the `processFile()` method, change from this:
 
 ```java
 private void processFile(File file) {
-    // TODO: Initialize these objects properly
-    final DocumentParser documentParser = null;
-    final DocumentSplitter documentSplitter = null;
+  // TODO: Initialize these objects properly
+  final DocumentParser documentParser = null;
+  final DocumentSplitter documentSplitter = null;
 ```
 
 To this:
 
 ```java
 private void processFile(File file) {
-    final DocumentParser documentParser = new ApachePdfBoxDocumentParser(true);
-    final DocumentSplitter documentSplitter = new DocumentByParagraphSplitter(1000, 100);
+  final DocumentParser documentParser = new ApachePdfBoxDocumentParser(true);
+  final DocumentSplitter documentSplitter = new DocumentByParagraphSplitter(1000, 100);
 ```
 
 In the `scanForPdfFiles()` method, change from this:
@@ -94,16 +94,16 @@ In the `scanForPdfFiles()` method, change from this:
 ```java
 @Scheduled(fixedRate = 5000)
 public void scanForPdfFiles() {
-    File dir = new File(knowledgeBaseInputFiles);
-    if (dir.exists() && dir.isDirectory()) {
-        File[] pdfFiles = dir.listFiles((d, name) -> name.toLowerCase().endsWith(".pdf"));
-        if (pdfFiles != null) {
-            for (File pdf : pdfFiles) {
-                // TODO: Uncomment the line below to enable file processing
-                // processFile(pdf);
-            }
-        }
+  File dir = new File(knowledgeBaseInputFiles);
+  if (dir.exists() && dir.isDirectory()) {
+    File[] pdfFiles = dir.listFiles((d, name) -> name.toLowerCase().endsWith(".pdf"));
+    if (pdfFiles != null) {
+      for (File pdf : pdfFiles) {
+        // TODO: Uncomment the line below to enable file processing
+        // processFile(pdf);
+      }
     }
+  }
 }
 ```
 
@@ -112,15 +112,15 @@ To this:
 ```java
 @Scheduled(fixedRate = 5000)
 public void scanForPdfFiles() {
-    File dir = new File(knowledgeBaseInputFiles);
-    if (dir.exists() && dir.isDirectory()) {
-        File[] pdfFiles = dir.listFiles((d, name) -> name.toLowerCase().endsWith(".pdf"));
-        if (pdfFiles != null) {
-            for (File pdf : pdfFiles) {
-                processFile(pdf);
-            }
-        }
+  File dir = new File(knowledgeBaseInputFiles);
+  if (dir.exists() && dir.isDirectory()) {
+    File[] pdfFiles = dir.listFiles((d, name) -> name.toLowerCase().endsWith(".pdf"));
+    if (pdfFiles != null) {
+      for (File pdf : pdfFiles) {
+        processFile(pdf);
+      }
     }
+  }
 }
 ```
 
@@ -153,7 +153,7 @@ INFO  FilesProcessor : Processed your-document.pdf - 15 segments stored out of 1
 4. Verify the file is renamed to `.processed`
 
 ```bash
-ls -la knowledge-base-input-files/
+ls -la $KNOWLEDGE_BASE_INPUT_FILES
 # You should see: your-document.processed
 ```
 
