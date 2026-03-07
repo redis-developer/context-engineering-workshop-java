@@ -69,7 +69,7 @@ The required software to complete this workshop depends on the option you select
 | [OpenAI](https://auth.openai.com/create-account)         | LLM that will power the responses for the AI application | Free trial sufficient |
 | [Redis Cloud](https://redis.io/try-free)                 | Semantic caching service powered by Redis LangCache      | Free tier sufficient  |
 
-> 💡 **Note on OpenAI costs:** While OpenAI occasionally offers free trial credits to new accounts, this workshop assumes pay-as-you-go pricing. The estimated cost of $1-3 covers all 9 labs. You can monitor your usage in the [OpenAI dashboard](https://platform.openai.com/usage) to track costs in real-time.
+> 💡 While OpenAI occasionally offers free trial credits to new accounts, this workshop assumes pay-as-you-go pricing. The estimated cost of $1-3 covers all 9 labs. You can monitor your usage in the [OpenAI dashboard](https://platform.openai.com/usage) to track costs in real-time.
 
 ## 🗺️ Workshop Structure
 This workshop has an estimated duration of 2 hours and is organized into 9 progressive labs, each building on the previous one. Each lab introduces a specific context engineering challenge, which is then addressed in the subsequent lab.
@@ -121,8 +121,6 @@ If you are using **Local development**:
   docker --version
   git --version
   ```
-
-> 💡 For Dev Containers and GitHub Codespaces, use the forwarded URL from the Ports panel for browser access to app ports (for example, 3000, 8080, and 5540), and use sidecar service DNS names for terminal commands inside the container workspace (for example, `http://redis-agent-memory-server:8000`).
 
 ### Step 3: Begin your First Lab
 
