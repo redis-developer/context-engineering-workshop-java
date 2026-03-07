@@ -42,23 +42,26 @@ By the end of this workshop, you'll have built a complete AI application featuri
 * Familiarity with RESTful APIs
 
 ### Required software
-Choose one of the following setup options:
+The required software to complete this workshop depends on the option you select below. You can choose from the following setup options:
 
-#### Option 1: Local development
+#### Option 1: GitHub Codespaces
+* GitHub account
+* Access to GitHub Codespaces (quota/billing enabled)
+* Browser or VS Code with the GitHub Codespaces extension
+
+#### Option 2: Dev Containers locally
+* [Docker](https://docs.docker.com/get-docker/)
+* Java IDE compatible with [Dev Containers](https://containers.dev/)
+  * [VS Code](https://code.visualstudio.com/)
+  * [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+
+#### Option 3: Local development
 * [Java 21+](https://www.oracle.com/java/technologies/downloads)
 * [Maven 3.9+](https://maven.apache.org/install.html)
 * [Node.js](https://nodejs.org/en/download/)
 * [Docker](https://docs.docker.com/get-docker/)
 * [Git](https://git-scm.com/install/)
 * Java IDE
-
-#### Option 2: Dev Containers
-* [Docker](https://docs.docker.com/get-docker/)
-* Java IDE compatible with [Dev Containers](https://containers.dev/)
-  * [VS Code](https://code.visualstudio.com/)
-  * [IntelliJ IDEA](https://www.jetbrains.com/idea/)
-
-> With Dev Containers, you don't need to install Java, Maven, Node.js, and Git explicitly.
 
 ### Required accounts
 | Account                                                  | Description                                              | Cost                  |
@@ -87,32 +90,40 @@ Each lab also contains a corresponding `lab-X-solution` branch with the complete
 
 ## 🚀 Getting Started
 
-### Step 1: Clone the repository
-```bash
-git clone https://github.com/redis-developer/context-engineering-workshop-java.git
-```
+### Step 1: Choose your Setup Option
+Pick one of the setup options from the Prerequisites section:
+- GitHub Codespaces
+- Dev Containers locally
+- Local development
 
-### Step 2: Prepare your Environment
-If you are using local development, ensure you have Java, Maven, Node.js, Docker, and Git installed. You can check their versions with:
-```bash
-java -version
-mvn -version
-npm --version
-docker --version
-git --version
-```
+### Step 2: Start your Workspace
 
-If you are using Dev Containers, open the project in the container and continue to Step 3. Follow the instructions for your IDE to open the project in the container.
+If you are using **GitHub Codespaces**:
+- Create a new codespace for this repository. You can find instructions on how to create a new codespace [here](https://docs.github.com/en/codespaces/getting-started/quickstart).
 
-Dev Container networking note:
-- Browser on your host machine: keep using `localhost` URLs (for example, `http://localhost:3000` and `http://localhost:8080`).
-- Terminal inside the Dev Container: use service DNS names for sidecar services (for example, `http://redis-agent-memory-server:8000`).
+If you are using **Dev Containers locally**:
+- Clone the repository:
+  ```bash
+  git clone https://github.com/redis-developer/context-engineering-workshop-java.git
+  ```
+- Open the project in a Dev Container. The instructions for doing this vary by IDE. Follow the guides for either [VS Code](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container) or [IntelliJ IDEA](https://www.jetbrains.com/help/idea/start-dev-container-from-welcome-screen.html).
 
-- **VS Code**: https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container
-- **IntelliJ IDEA**: https://www.jetbrains.com/help/idea/start-dev-container-from-welcome-screen.html
+If you are using **Local development**:
+- Clone the repository:
+  ```bash
+  git clone https://github.com/redis-developer/context-engineering-workshop-java.git
+  ```
+- Verify the installed tools:
+  ```bash
+  java -version
+  mvn -version
+  npm --version
+  docker --version
+  git --version
+  ```
 
 ### Step 3: Begin your First Lab
-Navigate to the cloned repository.
+If needed, navigate to the project repository root.
 ```bash
 cd context-engineering-workshop-java
 ```
