@@ -62,7 +62,7 @@ public class LongTermMemory {
 }
 ```
 
-### Step 1: Implement the Knowledge Base Content Retriever
+### Step 2: Implement the Knowledge Base Content Retriever
 
 In `LongTermMemory.java`, locate and implement the `getGeneralKnowledgeBase()` method.
 
@@ -86,7 +86,7 @@ private ContentRetriever getGeneralKnowledgeBase() {
 }
 ```
 
-### Step 1: Configure the RAG pipeline
+### Step 3: Configure the RAG pipeline
 
 In the `getRetrievalAugmentor()` method, implement the content injector configuration.
 
@@ -120,7 +120,7 @@ public RetrievalAugmentor getRetrievalAugmentor() {
 }
 ```
 
-### Step 1: Rebuild and Run the Backend
+### Step 4: Rebuild and Run the Backend
 
 ```bash
 cd backend-layer
@@ -128,7 +128,7 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-### Step 1: Keep the Frontend Running
+### Step 5: Keep the Frontend Running
 
 The frontend should still be running. If not:
 
@@ -260,6 +260,12 @@ Congratulations! You've successfully:
 ## ➡️ Next Steps
 
 You're ready for [Lab 5: Enabling On-demand Context Management for Memories](../lab-5-starter/README.md) where you'll add user-specific long-term memory capabilities.
+
+- Switch to the `lab-5-starter` branch
+```bash
+git checkout lab-5-starter
+```
+- Then follow the README instructions
 
 - Switch to the  branch
 \\n- Then follow the README instructions
