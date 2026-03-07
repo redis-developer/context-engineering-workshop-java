@@ -78,7 +78,7 @@ public class ModelManager {
 }
 ```
 
-### Step 1: Implement Query Compression
+### Step 2: Implement Query Compression
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/memory/LongTermMemory.java` and add query compression.
 
@@ -94,7 +94,7 @@ To this:
 QueryTransformer queryTransformer = new CompressingQueryTransformer(chatModel);
 ```
 
-### Step 1: Implement Content Reranking
+### Step 3: Implement Content Reranking
 
 Still in `LongTermMemory.java`, add the content aggregator with reranking.
 
@@ -117,7 +117,7 @@ ContentAggregator contentAggregator = ReRankingContentAggregator.builder()
         .build();
 ```
 
-### Step 1: Rebuild and Run the Backend
+### Step 4: Rebuild and Run the Backend
 
 ```bash
 cd backend-layer
@@ -125,7 +125,7 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-### Step 1: Keep the Frontend Running
+### Step 5: Keep the Frontend Running
 
 The frontend should still be running. If not:
 
@@ -241,6 +241,12 @@ Congratulations! You've successfully:
 ## ➡️ Next Steps
 
 You're ready for [Lab 7: Implementing Few-shot Learning in System Prompts](../lab-7-starter/README.md) where you'll add examples to improve response consistency.
+
+- Switch to the `lab-7-starter` branch
+```bash
+git checkout lab-7-starter
+```
+- Then follow the README instructions
 
 - Switch to the  branch
 \\n- Then follow the README instructions
