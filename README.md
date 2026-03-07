@@ -123,12 +123,12 @@ If you are using **Local development**:
   ```
 
 ### Step 3: Begin your First Lab
-If needed, navigate to the project repository root.
-```bash
-cd context-engineering-workshop-java
-```
 
-Click on the link for [Lab 1: Set up and deploy the AI application](https://github.com/redis-developer/context-engineering-workshop-java/blob/lab-1-starter/README.md) to get started!
+- Switch to the `lab-1-starter` branch
+```bash
+git checkout lab-1-starter
+```
+- Then follow the README instructions
 
 ## 📚 Resources
 - [Alexa Skill using Context Engineering](https://github.com/redis-developer/agent-memory-server-with-alexa-demo)
