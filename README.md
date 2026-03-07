@@ -185,7 +185,7 @@ If you click on the key, you can see the stored messages in JSON format.
 
 With this implementation of short-term memory, your chat application can now maintain context within a session, providing a more natural and engaging user experience. This will happen even if the backend layer is restarted.
 
-However, keep in mind that these messages are still short-term, meaning that they are shorted-lived. By default, the implementation of the ChatMemoryStore updates the working memory to be active for 5 minutes. This is controlled by the TTL property of the key.
+However, keep in mind that these messages are still short-term, meaning that they are short-lived. By default, the implementation of the ChatMemoryStore updates the working memory to be active for 5 minutes. This is controlled by the TTL property of the key.
 
 ## 🎨 Understanding the Code
 
