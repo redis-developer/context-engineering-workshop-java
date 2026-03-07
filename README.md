@@ -316,3 +316,9 @@ Congratulations! You've successfully:
 
 You're ready for [Lab 6: Implementing Query Compression and Context Reranking](../lab-6-starter/README.md) where you'll optimize query processing and improve retrieval quality.
 
+- Switch to the `lab-6-starter` branch
+```bash
+git checkout lab-6-starter
+```
+- Then follow the README instructions
+
