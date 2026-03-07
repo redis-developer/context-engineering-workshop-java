@@ -86,7 +86,7 @@ Include the following property to your `.env` file:
 CHAT_MEMORY_MAX_TOKENS=768
 ```
 
-The `max-tokens` value of `768` is very low for production environments but is suitable for testing token management behavior. This will give you a good testing experience so you won't have to create lenghty conversations with the AI to see the message pruning in action.
+The `max-tokens` value of `768` is very low for production environments but is suitable for testing token management behavior. This will give you a good testing experience so you won't have to create lengthy conversations with the AI to see the message pruning in action.
  
 ### Step 4: Rebuild and Run the Backend
 
