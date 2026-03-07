@@ -41,15 +41,17 @@ Before starting, ensure you have:
 git checkout lab-7-starter
 ```
 
+Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
+
 ### Step 2: Review the Current System Prompt
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/controller/ChatController.java` and locate the `SYSTEM_PROMPT` constant:
 
 ```java
 private static final String SYSTEM_PROMPT = """
-        You are an AI assistant that should act, talk, and behave as if you were J.A.R.V.I.S AI
-        from the Iron Man movies...
-        """;
+            You are an AI assistant that should act, talk, and behave as if you were J.A.R.V.I.S AI
+            from the Iron Man movies...
+            """;
 ```
 
 ### Step 3: Add Few-shot Examples to the System Prompt
