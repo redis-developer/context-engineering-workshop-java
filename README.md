@@ -49,7 +49,7 @@ private String modelName;
 private int maxTokens;
 ```
 
-### Step 1: Implement Token Window Chat Memory
+### Step 2: Implement Token Window Chat Memory
 
 In `ShortTermMemory.java`, update the `chatMemory()` method to use token-based memory management.
 
@@ -78,7 +78,7 @@ public ChatMemory chatMemory(ChatMemoryStore chatMemoryStore) {
 }
 ```
 
-### Step 1: Configure Token Limits
+### Step 3: Configure Token Limits
 
 Include the following property to your `.env` file:
 
@@ -88,7 +88,7 @@ CHAT_MEMORY_MAX_TOKENS=768
 
 The `max-tokens` value of `768` is very low for production environments but is suitable for testing token management behavior. This will give you a good testing experience so you won't have to create lenghty conversations with the AI to see the message pruning in action.
  
-### Step 1: Rebuild and Run the Backend
+### Step 4: Rebuild and Run the Backend
 
 ```bash
 cd backend-layer
@@ -96,7 +96,7 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-### Step 1: Keep the Frontend Running
+### Step 5: Keep the Frontend Running
 
 The frontend should still be running. If not:
 
@@ -229,6 +229,12 @@ Congratulations! You've successfully:
 ## ➡️ Next Steps
 
 You're ready for [Lab 9: Implementing Semantic Caching for Conversations](../lab-9-starter/README.md) where you'll add the final optimization - semantic caching to reduce redundant LLM calls.
+
+- Switch to the `lab-9-starter` branch
+```bash
+git checkout lab-9-starter
+```
+- Then follow the README instructions
 
 - Switch to the  branch
 \\n- Then follow the README instructions
