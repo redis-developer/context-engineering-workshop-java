@@ -104,6 +104,10 @@ git --version
 
 If you are using Dev Containers, open the project in the container and continue to Step 3. Follow the instructions for your IDE to open the project in the container.
 
+Dev Container networking note:
+- Browser on your host machine: keep using `localhost` URLs (for example, `http://localhost:3000` and `http://localhost:8080`).
+- Terminal inside the Dev Container: use service DNS names for sidecar services (for example, `http://redis-agent-memory-server:8000`).
+
 - **VS Code**: https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container
 - **IntelliJ IDEA**: https://www.jetbrains.com/help/idea/start-dev-container-from-welcome-screen.html
 
