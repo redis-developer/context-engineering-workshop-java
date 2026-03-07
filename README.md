@@ -34,7 +34,7 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
-Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
+Dev Container/Codespaces note: For browser access to app ports (for example, 3000, 8080, and 5540), use the forwarded URL from the Ports panel. If you run terminal commands inside the Dev Container or GitHub Codespaces, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
 
 ### Step 1: Define the Redis Agent Memory Server URL
 
@@ -44,7 +44,7 @@ If running from a local host terminal:
 AGENT_MEMORY_SERVER_URL=http://localhost:8000
 ```
 
-If running from a terminal inside the Dev Container:
+If running from a terminal inside the Dev Container or GitHub Codespaces:
 
 ```bash
 AGENT_MEMORY_SERVER_URL=http://redis-agent-memory-server:8000
@@ -58,7 +58,7 @@ If you are running this workshop from a local host terminal, start the container
 docker compose up -d
 ```
 
-If you are using Dev Containers, skip this step. The sidecar services should already be running.
+If you are using Dev Containers or GitHub Codespaces, skip this step. The sidecar services should already be running.
 
 ### Step 3: Verify if the Containers are Running (Local development only)
 
