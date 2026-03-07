@@ -17,7 +17,7 @@ public class ShortTermMemory {
     @Value("${agent.memory.server.url}")
     private String agentMemoryServerUrl;
 
-    @Value("${langchain4j.open-ai.streaming-chat-model.model-name}")
+    @Value("${langchain4j.open-ai.chat-model.model-name}")
     private String modelName;
 
     @Value("${chat.memory.max.tokens}")
