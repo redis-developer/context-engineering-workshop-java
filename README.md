@@ -56,13 +56,19 @@ If running from a terminal inside the Dev Container:
 AGENT_MEMORY_SERVER_URL=http://redis-agent-memory-server:8000
 ```
 
-### Step 3: Start the Redis Agent Memory Server
+### Step 3: Start the Redis Agent Memory Server (Local development only)
+
+If you are running this workshop from a local host terminal, start the containers with:
 
 ```bash
 docker compose up -d
 ```
 
-### Step 4: Verify if the Containers are Running
+If you are using Dev Containers, skip this step. The sidecar services should already be running.
+
+### Step 4: Verify if the Containers are Running (Local development only)
+
+If you are running this workshop from a local host terminal, verify container status with:
 
 ```bash
 docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}\t{{.Names}}"
