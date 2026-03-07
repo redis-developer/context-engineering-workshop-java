@@ -49,7 +49,7 @@ Open `backend-layer/src/main/java/io/redis/devrel/workshop/services/LangCacheSer
 public class LangCacheService {
     // Stores new responses in cache
     public void addNewResponse(String prompt, String response) {...}
-    
+
     // Searches for similar cached responses
     public Optional<String> searchForResponse(String prompt) {...}
 }
@@ -99,13 +99,11 @@ To this:
 @GetMapping("/ai/chat/string")
 public String chat(@RequestParam("query") String query) {
     return langCacheService.searchForResponse(query)
-            .map(Flux::just)
-            .orElseGet(() -> assistant.chat(SYSTEM_PROMPT, query)
-                    .collectList()
-                    .map(responses -> String.join("", responses))
-                    .doOnNext(response -> langCacheService.addNewResponse(query, response))
-                    .flux()
-            );
+            .orElseGet(() -> {
+                String response = assistant.chat(SYSTEM_PROMPT, query);
+                langCacheService.addNewResponse(query, response);
+                return response;
+            });
 }
 ```
 
