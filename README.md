@@ -78,9 +78,9 @@ You should see something like this:
 
 ```bash
 CONTAINER ID   IMAGE                                  STATUS                   PORTS                                         NAMES
-48df24537047   redislabs/agent-memory-server:0.12.7   Up 2 minutes (healthy)   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   redis-agent-memory-server
+48df24537047   redislabs/agent-memory-server:0.13.2   Up 2 minutes (healthy)   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp   redis-agent-memory-server
 33aade92ddbd   redis/redisinsight:3.0.2               Up 2 minutes (healthy)   0.0.0.0:5540->5540/tcp, [::]:5540->5540/tcp   redis-insight
-3c449915bb35   redis:8.4.0                            Up 2 minutes (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   redis-database
+3c449915bb35   redis:8.6.0                            Up 2 minutes (healthy)   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   redis-database
 ```
 
 ### Step 5: Review the ChatMemoryStore Implementation
