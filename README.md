@@ -242,3 +242,9 @@ Congratulations! You've successfully:
 
 You're ready for [Lab 7: Implementing Few-shot Learning in System Prompts](../lab-7-starter/README.md) where you'll add examples to improve response consistency.
 
+- Switch to the `lab-7-starter` branch
+```bash
+git checkout lab-7-starter
+```
+- Then follow the README instructions
+
