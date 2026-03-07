@@ -51,6 +51,8 @@ Add to your `.env` file:
 KNOWLEDGE_BASE_INPUT_FILES=/data/input-files
 ```
 
+> 💡 Here, `/data/input-files` represents the folder you want to use to ingest files. You will need to change this location to a folder of your choice that you have access to and write permissions for.
+
 ### Step 3: Add Sample PDF Documents
 
 Place at least one or more PDF files in the `KNOWLEDGE_BASE_INPUT_FILES` directory. For testing, you can use any PDF document that has multiple pages and paragraphs.
