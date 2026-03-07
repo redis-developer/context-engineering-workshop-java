@@ -41,6 +41,8 @@ Before starting, ensure you have:
 git checkout lab-7-starter
 ```
 
+Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
+
 ### Step 2: Review the Current System Prompt
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/controller/ChatController.java` and locate the `SYSTEM_PROMPT` constant:
