@@ -153,7 +153,7 @@ INFO  FilesProcessor : Processed your-document.pdf - 15 segments stored out of 1
 4. Verify the file is renamed to `.processed`
 
 ```bash
-ls -la knowledge-base-input-files/
+ls -la $KNOWLEDGE_BASE_INPUT_FILES
 # You should see: your-document.processed
 ```
 
