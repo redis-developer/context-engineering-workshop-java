@@ -15,7 +15,7 @@ By the end of this lab, you will:
 
 In this foundational lab, you'll deploy a basic AI chat application that will serve as the platform for implementing context engineering patterns throughout the workshop. This includes:
 
-- **Node.js Frontend**: Simple chat interface for testing purposes
+- **Node.js Frontend**: Simple chat interface for testing purposes 
 - **Spring Boot Application**: RESTful API backend for AI interactions
 - **LangChain4J Integration**: Framework for LLM orchestration
 - **OpenAI Connection**: GPT model for generating responses
