@@ -228,5 +228,3 @@ Congratulations! You've successfully:
 
 You're ready for [Lab 9: Implementing Semantic Caching for Conversations](../lab-9-starter/README.md) where you'll add the final optimization - semantic caching to reduce redundant LLM calls.
 
-- Switch to the  branch
-\\n- Then follow the README instructions
