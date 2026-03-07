@@ -34,7 +34,7 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
-Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
+Dev Container/Codespaces note: For browser access to app ports (for example, 3000, 8080, and 5540), use the forwarded URL from the Ports panel. If you run terminal commands inside the Dev Container or GitHub Codespaces, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
 
 ### Step 1: Review the Memory Service
 
@@ -137,6 +137,10 @@ npm start
 ### Store Personal Information
 
 Use curl to store a new personal memory directly into the Redis Agent Memory Server:
+
+Endpoint note for terminal commands:
+- Local host terminal: use `http://localhost:8000`.
+- Dev Container or GitHub Codespaces terminal: use `http://redis-agent-memory-server:8000` (replace `localhost` in the examples below).
 
 ```bash
 curl -X POST http://localhost:8000/v1/long-term-memory/ \
