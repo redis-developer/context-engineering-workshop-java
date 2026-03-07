@@ -34,15 +34,9 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
-### Step 1: Switch to the Lab 5 Branch
-
-```bash
-git checkout lab-5-starter
-```
-
 Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
 
-### Step 2: Review the Memory Service
+### Step 1: Review the Memory Service
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/services/MemoryService.java` and review the method to search long-term memories.
 
@@ -61,7 +55,7 @@ public List<String> searchUserMemories(String userId, String memory) {
 }
 ```
 
-### Step 3: Implement User Memory Retriever
+### Step 2: Implement User Memory Retriever
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/memory/LongTermMemory.java` and implement the `getLongTermMemories()` method.
 
@@ -85,7 +79,7 @@ private ContentRetriever getLongTermMemories(String userId) {
 }
 ```
 
-### Step 4: Update the Query Router for Dual Memory
+### Step 3: Update the Query Router for Dual Memory
 
 In the `getRetrievalAugmentor()` method, update the query router to include both knowledge base and user memories.
 
@@ -110,7 +104,7 @@ QueryRouter queryRouter = LanguageModelQueryRouter.builder()
         .build();
 ```
 
-### Step 5: Add ChatModel Parameter
+### Step 4: Add ChatModel Parameter
 
 Update the `getRetrievalAugmentor()` method signature to accept a ChatModel:
 
@@ -121,7 +115,7 @@ public RetrievalAugmentor getRetrievalAugmentor(ChatModel chatModel) {
 }
 ```
 
-### Step 6: Rebuild and Run the Backend
+### Step 5: Rebuild and Run the Backend
 
 ```bash
 cd backend-layer
@@ -129,7 +123,7 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-### Step 7: Keep the Frontend Running
+### Step 6: Keep the Frontend Running
 
 The frontend should still be running. If not:
 
@@ -321,3 +315,12 @@ Congratulations! You've successfully:
 ## ➡️ Next Steps
 
 You're ready for [Lab 6: Implementing Query Compression and Context Reranking](../lab-6-starter/README.md) where you'll optimize query processing and improve retrieval quality.
+
+- Switch to the `lab-6-starter` branch
+```bash
+git checkout lab-6-starter
+```
+- Then follow the README instructions
+
+- Switch to the  branch
+\\n- Then follow the README instructions
