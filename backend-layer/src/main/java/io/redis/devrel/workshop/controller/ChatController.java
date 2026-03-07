@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import reactor.core.publisher.Flux;
 
 @RestController
 public class ChatController {
@@ -18,15 +17,13 @@ public class ChatController {
     private LangCacheService langCacheService;
 
     @GetMapping("/ai/chat/string")
-    public Flux<String> chat(@RequestParam("query") String query) {
+    public String chat(@RequestParam("query") String query) {
         return langCacheService.searchForResponse(query)
-                .map(Flux::just)
-                .orElseGet(() -> assistant.chat(SYSTEM_PROMPT, query)
-                        .collectList()
-                        .map(responses -> String.join("", responses))
-                        .doOnNext(response -> langCacheService.addNewResponse(query, response))
-                        .flux()
-                );
+                .orElseGet(() -> {
+                    String response = assistant.chat(SYSTEM_PROMPT, query);
+                    langCacheService.addNewResponse(query, response);
+                    return response;
+                });
     }
 
     private static final String SYSTEM_PROMPT = """
