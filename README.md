@@ -260,5 +260,3 @@ Congratulations! You've successfully:
 
 You're ready for [Lab 3: Knowledge Base with Embeddings, Parsers, and Splitters](../lab-3-starter/README.md) where you'll add document processing and knowledge base capabilities.
 
-- Switch to the  branch
-\\n- Then follow the README instructions
