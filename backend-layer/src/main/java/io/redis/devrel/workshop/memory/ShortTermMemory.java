@@ -20,18 +20,14 @@ public class ShortTermMemory {
 
     @Bean
     public ChatMemoryStore chatMemoryStore() {
-        return WorkingMemoryStore.builder()
-                .agentMemoryServerUrl(agentMemoryServerUrl)
-                .storeAiMessages(true)
-                .build();
+        // TODO: Implement a WorkingMemoryStore that connects to the agentMemoryServerUrl
+        return null;
     }
 
     @Bean
     public ChatMemory chatMemory(ChatMemoryStore chatMemoryStore) {
-        return WorkingMemoryChat.builder()
-                .id(userId)
-                .chatMemoryStore(chatMemoryStore)
-                .build();
+        // TODO: Implement a WorkingMemoryChat that uses the WorkingMemoryStore
+        return null;
     }
 
 }
