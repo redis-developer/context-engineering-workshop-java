@@ -40,6 +40,8 @@ Before starting, ensure you have:
 git checkout lab-4-starter
 ```
 
+Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
+
 ### Step 2: Review the LongTermMemory Configuration
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/memory/LongTermMemory.java` and review the RAG configuration structure:
