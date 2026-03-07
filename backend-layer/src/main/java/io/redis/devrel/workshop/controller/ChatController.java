@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import reactor.core.publisher.Flux;
 
 @RestController
 public class ChatController {
@@ -21,7 +20,7 @@ public class ChatController {
     private String userId;
 
     @GetMapping("/ai/chat/string")
-    public Flux<String> chat(@RequestParam("query") String query) {
+    public String chat(@RequestParam("query") String query) {
         // TODO: Implement semantic caching with the LangCacheService
         return assistant.chat(SYSTEM_PROMPT, query);
     }
