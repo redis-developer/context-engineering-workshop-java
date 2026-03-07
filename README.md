@@ -40,10 +40,20 @@ Before starting, ensure you have:
 git checkout lab-2-starter
 ```
 
+Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
+
 ### Step 2: Define the Redis Agent Memory Server URL
+
+If running from a local host terminal:
 
 ```bash
 AGENT_MEMORY_SERVER_URL=http://localhost:8000
+```
+
+If running from a terminal inside the Dev Container:
+
+```bash
+AGENT_MEMORY_SERVER_URL=http://redis-agent-memory-server:8000
 ```
 
 ### Step 3: Start the Redis Agent Memory Server
