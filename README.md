@@ -35,15 +35,9 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
-### Step 1: Switch to the Lab 7 Branch
-
-```bash
-git checkout lab-7-starter
-```
-
 Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
 
-### Step 2: Review the Current System Prompt
+### Step 1: Review the Current System Prompt
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/controller/ChatController.java` and locate the `SYSTEM_PROMPT` constant:
 
@@ -54,7 +48,7 @@ private static final String SYSTEM_PROMPT = """
             """;
 ```
 
-### Step 3: Add Few-shot Examples to the System Prompt
+### Step 1: Add Few-shot Examples to the System Prompt
 
 Replace the existing `SYSTEM_PROMPT` with an enhanced version that includes few-shot examples.
 
@@ -126,7 +120,7 @@ private static final String SYSTEM_PROMPT = """
             """;
 ```
 
-### Step 4: Rebuild and Run the Backend
+### Step 1: Rebuild and Run the Backend
 
 ```bash
 cd backend-layer
@@ -134,7 +128,7 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-### Step 5: Keep the Frontend Running
+### Step 1: Keep the Frontend Running
 
 The frontend should still be running. If not:
 
@@ -267,3 +261,6 @@ Congratulations! You've successfully:
 ## ➡️ Next Steps
 
 You're ready for [Lab 8: Enabling Token Management to Handle Token Limits](../lab-8-starter/README.md) where you'll implement dynamic context window management.
+
+- Switch to the  branch
+\\n- Then follow the README instructions
