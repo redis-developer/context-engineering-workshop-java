@@ -70,7 +70,7 @@ private static final String SYSTEM_PROMPT = """
               temporary memories that are relevant only to the current session. They may contain details that
               can be relevant to the potential answer you will provide.
 
-            - User memories: This will be a list of memories that the user asked to be stored, explicitely.
+            - User memories: This will be a list of memories that the user asked to be stored, explicitly.
               They are long-term memories that persist across sessions. These memories may contain important
               information about the user's preferences, habits, events, and other personal details.
 
