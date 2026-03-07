@@ -267,5 +267,3 @@ Congratulations! You've successfully:
 
 You're ready for [Lab 4: Implementing Basic RAG with Knowledge Base Data](../lab-4-starter/README.md) where you'll integrate the knowledge base with your chat responses using Retrieval-Augmented Generation.
 
-- Switch to the  branch
-\\n- Then follow the README instructions
