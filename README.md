@@ -261,11 +261,5 @@ Congratulations! You've successfully:
 
 You're ready for [Lab 5: Enabling On-demand Context Management for Memories](../lab-5-starter/README.md) where you'll add user-specific long-term memory capabilities.
 
-- Switch to the `lab-5-starter` branch
-```bash
-git checkout lab-5-starter
-```
-- Then follow the README instructions
-
 - Switch to the  branch
 \\n- Then follow the README instructions
