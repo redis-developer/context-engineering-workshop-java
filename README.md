@@ -35,15 +35,9 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
-### Step 1: Switch to the Lab 8 Branch
-
-```bash
-git checkout lab-8-starter
-```
-
 Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
 
-### Step 2: Review Token Configuration
+### Step 1: Review Token Configuration
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/memory/ShortTermMemory.java` and review the token-related configuration:
 
@@ -55,7 +49,7 @@ private String modelName;
 private int maxTokens;
 ```
 
-### Step 3: Implement Token Window Chat Memory
+### Step 1: Implement Token Window Chat Memory
 
 In `ShortTermMemory.java`, update the `chatMemory()` method to use token-based memory management.
 
@@ -84,7 +78,7 @@ public ChatMemory chatMemory(ChatMemoryStore chatMemoryStore) {
 }
 ```
 
-### Step 4: Configure Token Limits
+### Step 1: Configure Token Limits
 
 Include the following property to your `.env` file:
 
@@ -94,7 +88,7 @@ CHAT_MEMORY_MAX_TOKENS=768
 
 The `max-tokens` value of `768` is very low for production environments but is suitable for testing token management behavior. This will give you a good testing experience so you won't have to create lenghty conversations with the AI to see the message pruning in action.
  
-### Step 5: Rebuild and Run the Backend
+### Step 1: Rebuild and Run the Backend
 
 ```bash
 cd backend-layer
@@ -102,7 +96,7 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-### Step 6: Keep the Frontend Running
+### Step 1: Keep the Frontend Running
 
 The frontend should still be running. If not:
 
@@ -235,3 +229,6 @@ Congratulations! You've successfully:
 ## ➡️ Next Steps
 
 You're ready for [Lab 9: Implementing Semantic Caching for Conversations](../lab-9-starter/README.md) where you'll add the final optimization - semantic caching to reduce redundant LLM calls.
+
+- Switch to the  branch
+\\n- Then follow the README instructions
