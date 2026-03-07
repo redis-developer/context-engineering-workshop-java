@@ -60,8 +60,6 @@ If you are running this workshop from a local host terminal, start the container
 docker compose up -d
 ```
 
-If you are using Dev Containers or GitHub Codespaces, skip this step. The sidecar services should already be running.
-
 ### Step 3: Verify if the Containers are Running (Local development only)
 
 If you are running this workshop from a local host terminal, verify container status with:
