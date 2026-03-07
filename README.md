@@ -191,11 +191,5 @@ Congratulations! You've successfully:
 
 You're ready for [Lab 2: Enabling Short-term Memory with Chat Memory](../lab-2-starter/README.md) where you'll add conversation memory to maintain context across messages.
 
-- Switch to the `lab-2-starter` branch
-```bash
-git checkout lab-2-starter
-```
-- Then follow the README instructions
-
 - Switch to the  branch
 \\n- Then follow the README instructions
