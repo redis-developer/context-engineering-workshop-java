@@ -41,17 +41,19 @@ Before starting, ensure you have:
 git checkout lab-9-starter
 ```
 
+Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
+
 ### Step 2: Review the LangCacheService
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/services/LangCacheService.java` and review the caching methods:
 
 ```java
 public class LangCacheService {
-   // Stores new responses in cache
-   public void addNewResponse(String prompt, String response) {...}
+    // Stores new responses in cache
+    public void addNewResponse(String prompt, String response) {...}
 
-   // Searches for similar cached responses
-   public Optional<String> searchForResponse(String prompt) {...}
+    // Searches for similar cached responses
+    public Optional<String> searchForResponse(String prompt) {...}
 }
 ```
 
@@ -65,9 +67,9 @@ Key configuration values:
 2. Navigate to the LangCache section in the left menu
 3. Create a new service with `Quick service creation`
 4. Note down:
-   - **Base URL**
-   - **API Key**
-   - **Cache ID**
+    - **Base URL**
+    - **API Key**
+    - **Cache ID**
 
 ### Step 4: Configure LangCache Properties
 
