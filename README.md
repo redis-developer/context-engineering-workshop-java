@@ -40,19 +40,35 @@ Before starting, ensure you have:
 git checkout lab-2-starter
 ```
 
+Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
+
 ### Step 2: Define the Redis Agent Memory Server URL
+
+If running from a local host terminal:
 
 ```bash
 AGENT_MEMORY_SERVER_URL=http://localhost:8000
 ```
 
-### Step 3: Start the Redis Agent Memory Server
+If running from a terminal inside the Dev Container:
+
+```bash
+AGENT_MEMORY_SERVER_URL=http://redis-agent-memory-server:8000
+```
+
+### Step 3: Start the Redis Agent Memory Server (Local development only)
+
+If you are running this workshop from a local host terminal, start the containers with:
 
 ```bash
 docker compose up -d
 ```
 
-### Step 4: Verify if the Containers are Running
+If you are using Dev Containers, skip this step. The sidecar services should already be running.
+
+### Step 4: Verify if the Containers are Running (Local development only)
+
+If you are running this workshop from a local host terminal, verify container status with:
 
 ```bash
 docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}\t{{.Names}}"
@@ -82,8 +98,8 @@ Change from this:
 ```java
 @Bean
 public ChatMemoryStore chatMemoryStore() {
-  // TODO: Implement a WorkingMemoryStore that connects to the agentMemoryServerUrl
-  return null;
+    // TODO: Implement a WorkingMemoryStore that connects to the agentMemoryServerUrl
+    return null;
 }
 ```
 
@@ -92,10 +108,10 @@ To this:
 ```java
 @Bean
 public ChatMemoryStore chatMemoryStore() {
-  return WorkingMemoryStore.builder()
-          .agentMemoryServerUrl(agentMemoryServerUrl)
-          .storeAiMessages(true)
-          .build();
+    return WorkingMemoryStore.builder()
+            .agentMemoryServerUrl(agentMemoryServerUrl)
+            .storeAiMessages(true)
+            .build();
 }
 ```
 
@@ -110,8 +126,8 @@ Change from this:
 ```java
 @Bean
 public ChatMemory chatMemory(ChatMemoryStore chatMemoryStore) {
-  // TODO: Implement a WorkingMemoryChat that uses the WorkingMemoryStore
-  return null;
+    // TODO: Implement a WorkingMemoryChat that uses the WorkingMemoryStore
+    return null;
 }
 ```
 
@@ -120,10 +136,10 @@ To this:
 ```java
 @Bean
 public ChatMemory chatMemory(ChatMemoryStore chatMemoryStore) {
-  return WorkingMemoryChat.builder()
-          .id(userId)
-          .chatMemoryStore(chatMemoryStore)
-          .build();
+    return WorkingMemoryChat.builder()
+            .id(userId)
+            .chatMemoryStore(chatMemoryStore)
+            .build();
 }
 ```
 
