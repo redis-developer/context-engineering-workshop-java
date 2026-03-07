@@ -98,14 +98,12 @@ To this:
 ```java
 @GetMapping("/ai/chat/string")
 public String chat(@RequestParam("query") String query) {
-   return langCacheService.searchForResponse(query)
-           .map(Flux::just)
-           .orElseGet(() -> assistant.chat(SYSTEM_PROMPT, query)
-                   .collectList()
-                   .map(responses -> String.join("", responses))
-                   .doOnNext(response -> langCacheService.addNewResponse(query, response))
-                   .flux()
-           );
+    return langCacheService.searchForResponse(query)
+            .orElseGet(() -> {
+                String response = assistant.chat(SYSTEM_PROMPT, query);
+                langCacheService.addNewResponse(query, response);
+                return response;
+            });
 }
 ```
 
