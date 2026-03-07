@@ -87,7 +87,7 @@ Change from this:
 
 ```java
 @GetMapping("/ai/chat/string")
-public Flux<String> chat(@RequestParam("query") String query) {
+public String chat(@RequestParam("query") String query) {
     // TODO: Implement semantic caching with the LangCacheService
     return assistant.chat(SYSTEM_PROMPT, query);
 }
@@ -97,7 +97,7 @@ To this:
 
 ```java
 @GetMapping("/ai/chat/string")
-public Flux<String> chat(@RequestParam("query") String query) {
+public String chat(@RequestParam("query") String query) {
     return langCacheService.searchForResponse(query)
             .map(Flux::just)
             .orElseGet(() -> assistant.chat(SYSTEM_PROMPT, query)
