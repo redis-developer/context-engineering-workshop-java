@@ -136,7 +136,7 @@ npm start
 
 ### Store Personal Information
 
-Use curl to store a new personal memory directyly into the Redis Agent Memory Server:
+Use curl to store a new personal memory directly into the Redis Agent Memory Server:
 
 ```bash
 curl -X POST http://localhost:8000/v1/long-term-memory/ \
