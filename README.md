@@ -35,15 +35,9 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
-### Step 1: Switch to the Lab 3 Branch
-
-```bash
-git checkout lab-3-starter
-```
-
 Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
 
-### Step 2: Configure the Knowledge Base Input Directory
+### Step 1: Configure the Knowledge Base Input Directory
 
 Add to your `.env` file:
 
@@ -53,11 +47,11 @@ KNOWLEDGE_BASE_INPUT_FILES=/data/input-files
 
 > 💡 Here, `/data/input-files` represents the folder you want to use to ingest files. You will need to change this location to a folder of your choice that you have access to and write permissions for.
 
-### Step 3: Add Sample PDF Documents
+### Step 2: Add Sample PDF Documents
 
 Place at least one or more PDF files in the `KNOWLEDGE_BASE_INPUT_FILES` directory. For testing, you can use any PDF document that has multiple pages and paragraphs.
 
-### Step 4: Review the FilesProcessor Implementation
+### Step 3: Review the FilesProcessor Implementation
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/services/FilesProcessor.java` and review the document processing logic:
 
@@ -74,7 +68,7 @@ public class FilesProcessor {
 
 As you can see, the `scanForPdfFiles()` method is scheduled to run every 5 seconds to check for new PDF files in the input directory. Once a file is detected, it calls the `processFile()` method to handle the document.
 
-### Step 5: Implement the Document Processing
+### Step 4: Implement the Document Processing
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/services/FilesProcessor.java` and implement the PDF file processing behavior. You won't need to implement everything, just the parts that are pending.
 
@@ -132,7 +126,7 @@ public void scanForPdfFiles() {
 
 With these changes, your application is now set up to automatically detect and process PDF files placed in the specified input directory. The parser and the splitter implementations used here were provided by the LangChain4J framework.
 
-### Step 6: Rebuild and Run the Backend
+### Step 5: Rebuild and Run the Backend
 
 ```bash
 cd backend-layer
@@ -140,7 +134,7 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-### Step 7: Monitor Document Processing
+### Step 6: Monitor Document Processing
 
 Watch the console logs to see your PDFs being processed:
 
@@ -272,3 +266,12 @@ Congratulations! You've successfully:
 ## ➡️ Next Steps
 
 You're ready for [Lab 4: Implementing Basic RAG with Knowledge Base Data](../lab-4-starter/README.md) where you'll integrate the knowledge base with your chat responses using Retrieval-Augmented Generation.
+
+- Switch to the `lab-4-starter` branch
+```bash
+git checkout lab-4-starter
+```
+- Then follow the README instructions
+
+- Switch to the  branch
+\\n- Then follow the README instructions
