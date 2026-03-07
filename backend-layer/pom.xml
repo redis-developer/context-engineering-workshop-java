@@ -55,6 +55,11 @@
 			<version>1.10.0-beta18</version>
 		</dependency>
 		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-reactor</artifactId>
+			<version>1.10.0-beta18</version>
+		</dependency>
+		<dependency>
 			<groupId>me.paulschwarz</groupId>
 			<artifactId>springboot3-dotenv</artifactId>
 			<version>5.1.0</version>
