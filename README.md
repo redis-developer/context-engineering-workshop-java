@@ -41,6 +41,8 @@ Before starting, ensure you have:
 git checkout lab-3-starter
 ```
 
+Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
+
 ### Step 2: Configure the Knowledge Base Input Directory
 
 Add to your `.env` file:
