@@ -190,3 +190,6 @@ Congratulations! You've successfully:
 ## ➡️ Next Steps
 
 You're ready for [Lab 2: Enabling Short-term Memory with Chat Memory](../lab-2-starter/README.md) where you'll add conversation memory to maintain context across messages.
+
+- Switch to the  branch
+\\n- Then follow the README instructions
