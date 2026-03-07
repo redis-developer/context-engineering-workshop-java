@@ -36,7 +36,9 @@ Before starting, ensure you have:
 
 > 💡 For Dev Containers and GitHub Codespaces, use the forwarded URL from the Ports panel for browser access to app ports (for example, 3000, 8080, and 5540), and use sidecar service DNS names for terminal commands inside the container workspace (for example, `http://redis-agent-memory-server:8000`).
 
-### Step 1: Define the Redis Agent Memory Server URL
+### Step 1: Define the Redis Agent Memory Server URL in `.env`
+
+Add the `AGENT_MEMORY_SERVER_URL` property to your `.env` file so the value persists across terminals and restarts:
 
 If running from a local host terminal:
 
@@ -265,4 +267,3 @@ You're ready for [Lab 3: Knowledge Base with Embeddings, Parsers, and Splitters]
 git checkout lab-3-starter
 ```
 - Then follow the README instructions
-
