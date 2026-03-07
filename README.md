@@ -46,7 +46,7 @@ git checkout lab-8-starter
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/memory/ShortTermMemory.java` and review the token-related configuration:
 
 ```java
-@Value("${langchain4j.open-ai.streaming-chat-model.model-name}")
+@Value("${langchain4j.open-ai.chat-model.model-name}")
 private String modelName;
 
 @Value("${chat.memory.max.tokens}")

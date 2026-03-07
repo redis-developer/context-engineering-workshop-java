@@ -68,6 +68,16 @@ public class ChatController {
             [Example 4 - When no relevant context is found]
             User: "What is the capital of France?"
             Context: "Enjoys coding in Java", Memory: "Favorite color is black"
-            Response: "I don't have enough context to answer that question accurately."
+            Response: "The capital of France is Paris. This is general knowledge not requiring personal context."
+
+            [Example 5 - Combining multiple relevant memories]
+            User: "Tell me about my work preferences"
+            Context: "Works as software engineer", "Favorite language is Java", "Prefers remote work", "Birthday October 5th"
+            Response: "You work as a software engineer with a preference for Java programming. You also prefer remote work arrangements."
+
+            [Example 6 - Handling document knowledge]
+            User: "What does the document say about garage door codes?"
+            Context: Document: "The garage door code is 70170"
+            Response: "According to the document, the garage door code is 70170."
             """;
 }
