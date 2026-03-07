@@ -34,15 +34,9 @@ Before starting, ensure you have:
 
 ## 🚀 Setup Instructions
 
-### Step 1: Switch to the Lab 4 Branch
-
-```bash
-git checkout lab-4-starter
-```
-
 Dev Container note: Browser URLs remain `localhost`, but if you run terminal commands inside the Dev Container, use sidecar service DNS names (for example, `http://redis-agent-memory-server:8000`).
 
-### Step 2: Review the LongTermMemory Configuration
+### Step 1: Review the LongTermMemory Configuration
 
 Open `backend-layer/src/main/java/io/redis/devrel/workshop/memory/LongTermMemory.java` and review the RAG configuration structure:
 
@@ -68,7 +62,7 @@ public class LongTermMemory {
 }
 ```
 
-### Step 3: Implement the Knowledge Base Content Retriever
+### Step 1: Implement the Knowledge Base Content Retriever
 
 In `LongTermMemory.java`, locate and implement the `getGeneralKnowledgeBase()` method.
 
@@ -92,7 +86,7 @@ private ContentRetriever getGeneralKnowledgeBase() {
 }
 ```
 
-### Step 4: Configure the RAG pipeline
+### Step 1: Configure the RAG pipeline
 
 In the `getRetrievalAugmentor()` method, implement the content injector configuration.
 
@@ -126,7 +120,7 @@ public RetrievalAugmentor getRetrievalAugmentor() {
 }
 ```
 
-### Step 5: Rebuild and Run the Backend
+### Step 1: Rebuild and Run the Backend
 
 ```bash
 cd backend-layer
@@ -134,7 +128,7 @@ mvn clean package
 mvn spring-boot:run
 ```
 
-### Step 6: Keep the Frontend Running
+### Step 1: Keep the Frontend Running
 
 The frontend should still be running. If not:
 
@@ -266,3 +260,6 @@ Congratulations! You've successfully:
 ## ➡️ Next Steps
 
 You're ready for [Lab 5: Enabling On-demand Context Management for Memories](../lab-5-starter/README.md) where you'll add user-specific long-term memory capabilities.
+
+- Switch to the  branch
+\\n- Then follow the README instructions
